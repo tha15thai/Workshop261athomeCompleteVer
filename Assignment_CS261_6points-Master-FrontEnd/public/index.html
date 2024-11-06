@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="login-container">
+            <div class="header">
+                <div class="circles">
+                    <div class="circle2"></div>
+                    <div class="circle1"></div>
+                    <div class="circle"></div>
+                </div>
+                <div style="height: 40px;"></div>
+                <h1>Login Page</h1>
+                <p id="userNameDisplay">Name: </p>
+            </div>
+
+            <div class="form-container">
+                <input type="text" id="username" placeholder="Username" required>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span class="toggle-password" onclick="togglePassword()">Show</span> 
+                </div>
+
+                <div class="dropdown-container">
+                    <select id="role" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="student">Student</option>
+                        <option value="employee">Lecturer</option>
+                        <option value="employee">Admin</option>
+                    </select>
+                </div>
+
+                <button onclick="submitLogin()" type="button" id="loginButton">Login</button>
+                <p id="message"></p>
+                <!--<div id="accountInfo" style="margin-top: 20px; display: none;"></div>-->
+            </div>
+
+            <div class="footer">
+                <button class="btn request-form">Request Form</button>
+                <button class="btn dashboard">Dashboard</button>
+                <button class="btn logout">LOGOUT</button>
+            </div>
+        </div>
+
+        <!-- บล็อกแสดงผลลัพธ์ -->
+        <div class="result-container" id="accountInfo" style="display: none;">
+            <!-- ข้อมูลที่ได้จาก API จะมาแสดงที่นี่ -->
+        </div>
+    </div>
+
+    <!-- Popup ที่จะแสดงเมื่อเกิดข้อผิดพลาดในการ login -->
+    <div id="loginFailPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <strong><p>Login Page</p></strong>
+            <br>
+            <p>Login failed! Please try again.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

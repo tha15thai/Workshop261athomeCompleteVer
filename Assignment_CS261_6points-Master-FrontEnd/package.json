@@ -1,0 +1,14 @@
+{
+  "name": "firstproject",
+  "version": "1.0.0",
+  "description": "Frontend of Wep App Request Form",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thawanhathai",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
